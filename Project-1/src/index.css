@@ -1,0 +1,30 @@
+
+
+body{
+    background-color: #ffff;
+    height: 98vh;
+ 
+}
+.nav-link{
+ color: black;
+ font-weight: 500;
+}
+.nav-link:hover{
+    color: red;
+}
+h1{
+  color: black;
+    font-weight: 900;
+font-size: 108px;
+}
+.mainheading{
+    margin-top: 80px;
+    color: black;
+    font-weight: 900;
+    font-size: 108px;
+    line-height: 1;
+}
+p{
+    margin-top: 20px;
+    width: 70%;
+}
