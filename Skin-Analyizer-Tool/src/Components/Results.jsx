@@ -8,7 +8,7 @@ function Results(props) {
         <div className="row text-center py-5">
           <div className="col-md-8 col-12 offset-md-2">
             <h5 className="lead mt-5">The Leading AI Acne Analyzer</h5>
-            <h4 className="display-3 mt-3">
+            <h4 className="display-2 mt-3">
               Explore Ai Enhanced Skin Acne Analysis
             </h4>
             <p className="lead mt-4">
@@ -19,12 +19,12 @@ function Results(props) {
           </div>
         </div>
 
-        <div className="row mt-5 pt-5">
+        <div className="row mt-5 ">
           <Before className="col-md-6 col-12">
             <div className="row text-center">
               <div className="col">
                 <img
-                  src="/Images/Group 1000001436 (1).png"
+                  src={props.response.image_before}
                   className="rounded-5"
                   alt=""
                 />
@@ -35,14 +35,14 @@ function Results(props) {
                 <h3>
                   Skin Score:
                   <span className="text-danger mx-3 ">
-                   23%
+                  {props.response.PercentageBefore}
                   </span>
-                  <Box className="bg-danger ">Alarming</Box>
+                  <Box className="bg-danger ">{props.response.BeforeTreatmentSkinCondition}</Box>
                 </h3>
                 <h3 className="mt-4">Acne:</h3>
-                <p>The bounding area is showing the acne spots on skin.</p>
+                <p>{props.response.Acne_Pimples}</p>
                 <h3>Discription</h3>
-                <p>Convallis duis sodales integer in arcu aliquet amet sed. Fusce gravida lectus proin nunc at congue. Posuere orci in luctus tincidunt. At nullam risus sed viverra ut. Consectetur arcu.</p>
+                <p>{props.response.second_image_des}</p>
               </div>
             </div>
           </Before>
@@ -50,7 +50,7 @@ function Results(props) {
             <div className="row text-center">
               <div className="col">
                 <img
-                  src="/Images/Group 1000001436.png"
+                  src={props.response.image_after}
                   className="rounded-5"
                   alt=""
                 />
@@ -61,22 +61,27 @@ function Results(props) {
                 <h3>
                   Skin Score:
                   <span className="text-success mx-3">
-                   64%
+                  {props.response.PercentageAfter}
                   </span>
-                  <Box className="bg-success">Average</Box>
+                  <Box className="bg-success">{props.response.AfterTreatmentSkinCondition}</Box>
                 </h3>
                 <h3 className="mt-4">Acne:</h3>
-                <p>The bounding area is showing the acne spots on skin.</p>
+                <p>{props.response.Acne_Pimples}</p>
                 <h3>Discription</h3>
-                <p>Convallis duis sodales integer in arcu aliquet amet sed. Fusce gravida lectus proin nunc at congue. Posuere orci in luctus tincidunt. At nullam risus sed viverra ut. Consectetur arcu.</p>
+                <p>{props.response.second_image_des}</p>
               </div>
             </div>
           </After>
         </div>
-        <Conclusion className="row text-center mt-5 py-5" id="conclusion">
+        <Conclusion className="row text-center mt-5 py-4" id="conclusion">
+          <div className="col">
           <h6>Conclusion</h6>
-          <p className="mt-3">Ultrices id nibh purus iaculis nisi. Vitae amet porttitor eget laoreet pharetra a. Placerat sed fringilla amet neque. Quis massa rutrum eget consequat amet in. Justo quam orci sed mi. Congue auctor nam nunc porta lacus.
-Lobortis fringilla ut pretium tellus amet eget lectus velit at. Varius phasellus adipiscing commodo tellus massa habitasse in sagittis. Ut ultricies augue posuere justo amet.</p>
+          <p className="mt-3">{props.response.Conclusion}</p>
+          <div className="row text-center mt-4"><div className="col">
+          <button className="btn" onClick={props.hide}>Compare Again</button>
+            </div></div>
+          
+          </div>
         </Conclusion>
       </div>
     </>
@@ -124,7 +129,17 @@ p{
   line-height: 1.3;
   font-weight: 300;
 }
+button{
+  color: #66bcb9;
+  font-weight: 400;
+  font-size: 135%;
+  background-color: white;
+ 
+}
+button:hover{
+  background-color: black;
+}
 h6{
-
+  font-size: 140%;
 }
 `

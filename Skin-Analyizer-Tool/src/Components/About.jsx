@@ -6,7 +6,7 @@ function About() {
     <>
       <AboutBox className="container-fluid" id="about">
         <div className="row">
-          <div className="col-md-6 text-a col-12 text-md-start text-center mt-md-5 pt-3 ">
+          <div className="col-lg-6 text-a col-12 text-lg-start text-center mt-lg-5 pt-3 ">
             <h6 className="lead mt-5">About</h6>
             <h4 className="display-5 text-capitalize mt-4">
               helping you make informed decisions effortlessly
@@ -53,7 +53,7 @@ function About() {
             </div>
           </div>
 
-          <div className="col-md-6 col-12 text-md-start text center mt-md-0 mt-5">
+          <div className="col-lg-6 col-12 text-lg-start text center mt-lg-0 mt-5">
             <img src="/Images/Aboutmain.png" alt="" className="img-fluid " />
           </div>
         </div>

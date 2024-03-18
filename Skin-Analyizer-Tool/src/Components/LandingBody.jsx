@@ -5,6 +5,7 @@ import Analyize from "./Analyize";
 import styled from "styled-components";
 function LandingBody(props) {
   const [active, setActive] = useState(true);
+
   function toggleOptions1() {
     setActive(false);
   }
@@ -14,7 +15,7 @@ function LandingBody(props) {
 
   return (
     <>
-      <MainBody className="container-fluid" id="main">
+      <MainBody blur={props.blur} className="container-fluid" id="main">
         <div className="container-fluid py-5" id="home">
           <div className="row mt-5">
             <div className=" col-lg-5 col-12">
@@ -96,6 +97,9 @@ const MainBody=styled.div`
   width: 98vw;
   overflow-x: hidden;
   padding:0px 0px  0px 5%;
+
+  filter: ${props => props.blur ? 'blur(3px)' : 'blur(0px)'};
+  -webkit-filter: ${props => props.blur ? 'blur(7px)' : 'blur(0px)'};
   .maincard{
     
   }

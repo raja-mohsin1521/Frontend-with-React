@@ -17,6 +17,7 @@ body {
 #navbar button {
   background-color: #66bcb9;
   border: #66bcb9;
+  font-size: 120%;
 }
 .mobileview {
   height: 0vh;
@@ -30,6 +31,7 @@ body {
   color: #060e0e;
   text-decoration: none;
   font-weight: 500;
+  font-size: 125%;
 }
 
 .activenav {
@@ -246,7 +248,7 @@ p {
   background-image: url(/Images/Rectangle\ 41.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80vh;
+ 
   border-radius: 50px;
   color: #ffffff;
   width: 88vw;
@@ -371,4 +373,8 @@ footer p {
 #uploadbtn2 {
   padding: 12px 11.3px;
   font-size: small;
+}
+footer a{
+  text-decoration: none;
+  color: white;
 }

@@ -58,10 +58,10 @@ function Footer() {
           <div className="mt-2 col-md-4 order-md-3 order-2">
             <div className="row">
               <div className="col-md-6 text-md-end ">
-                <p>Terms and conditions</p>
+                <a href="#">Terms and conditions</a>
               </div>
               <div className="col-md-6 text-md-start">
-                <p>Privacy Policy</p>
+                <a href="#">Privacy Policy</a>
               </div>
             </div>
           </div>
